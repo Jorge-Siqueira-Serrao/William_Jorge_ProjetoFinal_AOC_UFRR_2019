@@ -1,0 +1,20 @@
+-- 
+-- Author: William thiago
+--
+-- Data: Dezembro de 2019
+--
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity sonic is
+	PORT(
+		clock: in std_logic; --entrada do clock 
+		out_sonic: out std_logic; -- saída do processador
+	);
+end sonic;
+
+architecture hardware of sonic is
+	begin
+		out_sonic <= clock;
+end hardware;
+	
