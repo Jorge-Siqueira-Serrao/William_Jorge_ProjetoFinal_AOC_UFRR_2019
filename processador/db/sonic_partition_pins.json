@@ -1,0 +1,233 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "out_out_pc[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_out_pc[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_out_pc[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_out_pc[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_rom_value[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_rom_value[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_rom_value[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_rom_value[4]",
+					"strict" : false
+				},
+				{
+					"name" : "out_rom_value[5]",
+					"strict" : false
+				},
+				{
+					"name" : "out_rom_value[6]",
+					"strict" : false
+				},
+				{
+					"name" : "out_rom_value[7]",
+					"strict" : false
+				},
+				{
+					"name" : "out_op_code_sonic[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_op_code_sonic[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_op_code_sonic[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_op_code_sonic[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg2[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_reg2[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_ula_sonic[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_ula_sonic[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_ula_sonic[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_ula_sonic[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_ula_sonic[4]",
+					"strict" : false
+				},
+				{
+					"name" : "out_ula_sonic[5]",
+					"strict" : false
+				},
+				{
+					"name" : "out_ula_sonic[6]",
+					"strict" : false
+				},
+				{
+					"name" : "out_ula_sonic[7]",
+					"strict" : false
+				},
+				{
+					"name" : "out_out_somador_pc[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_out_somador_pc[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_out_somador_pc[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_out_somador_pc[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_out_somador_pc[4]",
+					"strict" : false
+				},
+				{
+					"name" : "out_mult_2x1_br[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_mult_2x1_br[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_mult_2x1_br[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_mult_2x1_br[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_mult_2x1_br[4]",
+					"strict" : false
+				},
+				{
+					"name" : "out_mult_2x1_br[5]",
+					"strict" : false
+				},
+				{
+					"name" : "out_mult_2x1_br[6]",
+					"strict" : false
+				},
+				{
+					"name" : "out_mult_2x1_br[7]",
+					"strict" : false
+				},
+				{
+					"name" : "out_banco_reg_a_sonic[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_banco_reg_a_sonic[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_banco_reg_a_sonic[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_banco_reg_a_sonic[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_banco_reg_a_sonic[4]",
+					"strict" : false
+				},
+				{
+					"name" : "out_banco_reg_a_sonic[5]",
+					"strict" : false
+				},
+				{
+					"name" : "out_banco_reg_a_sonic[6]",
+					"strict" : false
+				},
+				{
+					"name" : "out_banco_reg_a_sonic[7]",
+					"strict" : false
+				},
+				{
+					"name" : "out_banco_reg_b_sonic[0]",
+					"strict" : false
+				},
+				{
+					"name" : "out_banco_reg_b_sonic[1]",
+					"strict" : false
+				},
+				{
+					"name" : "out_banco_reg_b_sonic[2]",
+					"strict" : false
+				},
+				{
+					"name" : "out_banco_reg_b_sonic[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out_banco_reg_b_sonic[4]",
+					"strict" : false
+				},
+				{
+					"name" : "out_banco_reg_b_sonic[5]",
+					"strict" : false
+				},
+				{
+					"name" : "out_banco_reg_b_sonic[6]",
+					"strict" : false
+				},
+				{
+					"name" : "out_banco_reg_b_sonic[7]",
+					"strict" : false
+				},
+				{
+					"name" : "clock_sonic",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
