@@ -1,0 +1,122 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/familia silva/Desktop/PROCESSADOR SONIC/Processador/Components/sonic/simulation/qsim
+Esonic
+Z0 w1575393193
+Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 OGn598C_0mX<WSGfCb?AK2
+Z2 DPx8 cyclonev 19 cyclonev_components 0 22 CcdNAEi>PYH4@n><]NQ]V2
+Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 QZo1Vh6en2ZO3=hNmAfQ>0
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+Z10 dC:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/simulation/qsim
+Z11 8sonic.vho
+Z12 Fsonic.vho
+l0
+L38
+VXX``;aJ93X_PZ]mR4ko:12
+!s100 ne^UlQUC_02JgSQmcb1R^3
+Z13 OV;C;10.5b;63
+32
+Z14 !s110 1575393194
+!i10b 1
+Z15 !s108 1575393194.000000
+Z16 !s90 -work|work|sonic.vho|
+Z17 !s107 sonic.vho|
+!i113 1
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 5 sonic 0 22 XX``;aJ93X_PZ]mR4ko:12
+l543
+L54
+V>PNP1c0eF:mMeCEWLe_zl2
+!s100 6GKU^E^X>YFk`gDSWicz>1
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R18
+R19
+Esonic_vhd_vec_tst
+Z20 w1575393189
+R7
+R8
+R10
+Z21 8Waveform4.vwf.vht
+Z22 FWaveform4.vwf.vht
+l0
+L31
+VHo0NVnIM?RB8[Y[A8Q;X>2
+!s100 7MoAdJRLK<8JVJJ67l@Tz2
+R13
+32
+Z23 !s110 1575393195
+!i10b 1
+Z24 !s108 1575393195.000000
+Z25 !s90 -work|work|Waveform4.vwf.vht|
+Z26 !s107 Waveform4.vwf.vht|
+!i113 1
+R18
+R19
+Asonic_arch
+R7
+R8
+Z27 DEx4 work 17 sonic_vhd_vec_tst 0 22 Ho0NVnIM?RB8[Y[A8Q;X>2
+l62
+L33
+Z28 V=Bkm`30KgOeJC46TFJcId1
+Z29 !s100 YfG7dACf<KnjLEHKa3f[63
+R13
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R18
+R19
+vsonic_vlg_vec_tst
+!s110 1575372803
+!i10b 1
+!s100 ze5]c`1N]ITfc=Czlz9H@1
+IkAbO;1[B165z^ja]hbg=32
+VDg1SIo80bB@j0V0VzS_@n1
+dC:/Users/familia silva/Desktop/PROCESSADOR SONIC/Processador/simulation/qsim
+w1575372797
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+L0 30
+OV;L;10.4b;61
+r1
+!s85 0
+31
+!s108 1575372803.000000
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R18
