@@ -1,0 +1,717 @@
+Analysis & Synthesis report for sonic
+Tue Dec 03 13:26:14 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Registers Packed Into Inferred Megafunctions
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Source assignments for memoria_ram:memoria_ram_map|altsyncram:ram_rtl_0|altsyncram_afu1:auto_generated
+ 14. Parameter Settings for Inferred Entity Instance: memoria_ram:memoria_ram_map|altsyncram:ram_rtl_0
+ 15. altsyncram Parameter Settings by Entity Instance
+ 16. Port Connectivity Checks: "ula:ula_map|sub_8_bits:port_map_sub|adder_8_bits:A1"
+ 17. Port Connectivity Checks: "ula:ula_map|sub_8_bits:port_map_sub"
+ 18. Port Connectivity Checks: "ula:ula_map|adder_8_bits:port_map_adder"
+ 19. Port Connectivity Checks: "ula:ula_map"
+ 20. Port Connectivity Checks: "divisao_instrucao:divisao_instrucao_map"
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Elapsed Time Per Partition
+ 23. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue Dec 03 13:26:14 2019       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; sonic                                       ;
+; Top-level Entity Name           ; sonic                                       ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 20                                          ;
+; Total pins                      ; 65                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 64                                          ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; sonic              ; sonic              ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                              ;
++---------------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                        ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                          ; Library ;
++---------------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
+; sonic.vhd                                               ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd                                               ;         ;
+; componentes/pc/pc.vhd                                   ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/pc/pc.vhd                                   ;         ;
+; componentes/memoria_rom/memoria_rom.vhd                 ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/memoria_rom/memoria_rom.vhd                 ;         ;
+; componentes/divisao_instrucao/divisao_instrucao.vhd     ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/divisao_instrucao/divisao_instrucao.vhd     ;         ;
+; componentes/banco_registradores/banco_registradores.vhd ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/banco_registradores/banco_registradores.vhd ;         ;
+; componentes/multiplexador_2x1/multiplexador_2x1.vhd     ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/multiplexador_2x1/multiplexador_2x1.vhd     ;         ;
+; componentes/unidade_controle/unidade_controle.vhd       ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/unidade_controle/unidade_controle.vhd       ;         ;
+; componentes/extensor_sinal_2_8/extensor_sinal_2_8.vhd   ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/extensor_sinal_2_8/extensor_sinal_2_8.vhd   ;         ;
+; componentes/temp_zero/temp_zero.vhd                     ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/temp_zero/temp_zero.vhd                     ;         ;
+; componentes/mult/multi.vhd                              ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/mult/multi.vhd                              ;         ;
+; componentes/adder/adder_8_bits.vhd                      ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/adder/adder_8_bits.vhd                      ;         ;
+; componentes/adder/full_adder.vhd                        ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/adder/full_adder.vhd                        ;         ;
+; componentes/adder/half_adder.vhd                        ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/adder/half_adder.vhd                        ;         ;
+; componentes/adder/sub_8_bits.vhd                        ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/adder/sub_8_bits.vhd                        ;         ;
+; componentes/ula/ula.vhd                                 ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd                                 ;         ;
+; componentes/memoria_ram/memoria_ram.vhd                 ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/memoria_ram/memoria_ram.vhd                 ;         ;
+; componentes/extensor_sinal_4_8/extensor_sinal_4_8.vhd   ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/extensor_sinal_4_8/extensor_sinal_4_8.vhd   ;         ;
+; componentes/somador_pc/somador_pc.vhd                   ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/somador_pc/somador_pc.vhd                   ;         ;
+; componentes/port_and/port_and.vhd                       ; yes             ; User VHDL File                                        ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/port_and/port_and.vhd                       ;         ;
+; altsyncram.tdf                                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                 ;         ;
+; stratix_ram_block.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                          ;         ;
+; lpm_mux.inc                                             ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                    ;         ;
+; lpm_decode.inc                                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                 ;         ;
+; aglobal181.inc                                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                 ;         ;
+; a_rdenreg.inc                                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                  ;         ;
+; altrom.inc                                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                                     ;         ;
+; altram.inc                                              ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                                     ;         ;
+; altdpram.inc                                            ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                                   ;         ;
+; db/altsyncram_afu1.tdf                                  ; yes             ; Auto-Generated Megafunction                           ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/db/altsyncram_afu1.tdf                                  ;         ;
+; db/sonic.ram0_memoria_ram_2c141c.hdl.mif                ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/db/sonic.ram0_memoria_ram_2c141c.hdl.mif                ;         ;
++---------------------------------------------------------+-----------------+-------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                         ;
++---------------------------------------------+-------------------------------------------------------+
+; Resource                                    ; Usage                                                 ;
++---------------------------------------------+-------------------------------------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 107                                                   ;
+;                                             ;                                                       ;
+; Combinational ALUT usage for logic          ; 184                                                   ;
+;     -- 7 input functions                    ; 2                                                     ;
+;     -- 6 input functions                    ; 26                                                    ;
+;     -- 5 input functions                    ; 73                                                    ;
+;     -- 4 input functions                    ; 28                                                    ;
+;     -- <=3 input functions                  ; 55                                                    ;
+;                                             ;                                                       ;
+; Dedicated logic registers                   ; 20                                                    ;
+;                                             ;                                                       ;
+; I/O pins                                    ; 65                                                    ;
+; Total MLAB memory bits                      ; 0                                                     ;
+; Total block memory bits                     ; 64                                                    ;
+;                                             ;                                                       ;
+; Total DSP Blocks                            ; 0                                                     ;
+;                                             ;                                                       ;
+; Maximum fan-out node                        ; multiplexador_2x1:multiplexador_2x1_map|out_port[1]~1 ;
+; Maximum fan-out                             ; 45                                                    ;
+; Total fan-out                               ; 1053                                                  ;
+; Average fan-out                             ; 3.08                                                  ;
++---------------------------------------------+-------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                      ;
++--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                       ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                     ; Entity Name         ; Library Name ;
++--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+---------------------+--------------+
+; |sonic                                           ; 184 (1)             ; 20 (0)                    ; 64                ; 0          ; 65   ; 0            ; |sonic                                                                                  ; sonic               ; work         ;
+;    |banco_registradores:banco_registradores_map| ; 18 (18)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |sonic|banco_registradores:banco_registradores_map                                      ; banco_registradores ; work         ;
+;    |memoria_ram:memoria_ram_map|                 ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |sonic|memoria_ram:memoria_ram_map                                                      ; memoria_ram         ; work         ;
+;       |altsyncram:ram_rtl_0|                     ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |sonic|memoria_ram:memoria_ram_map|altsyncram:ram_rtl_0                                 ; altsyncram          ; work         ;
+;          |altsyncram_afu1:auto_generated|        ; 0 (0)               ; 0 (0)                     ; 64                ; 0          ; 0    ; 0            ; |sonic|memoria_ram:memoria_ram_map|altsyncram:ram_rtl_0|altsyncram_afu1:auto_generated  ; altsyncram_afu1     ; work         ;
+;    |memoria_rom:memoria_rom_port_map|            ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|memoria_rom:memoria_rom_port_map                                                 ; memoria_rom         ; work         ;
+;    |multiplexador_2x1:multiplexador_2x1_map|     ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|multiplexador_2x1:multiplexador_2x1_map                                          ; multiplexador_2x1   ; work         ;
+;    |multiplexador_2x1:multiplexador_2x1_ram_map| ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|multiplexador_2x1:multiplexador_2x1_ram_map                                      ; multiplexador_2x1   ; work         ;
+;    |pc:pc_port_map|                              ; 1 (1)               ; 4 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|pc:pc_port_map                                                                   ; pc                  ; work         ;
+;    |somador_pc:somador_pc_map|                   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|somador_pc:somador_pc_map                                                        ; somador_pc          ; work         ;
+;    |ula:ula_map|                                 ; 133 (20)            ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|ula:ula_map                                                                      ; ula                 ; work         ;
+;       |adder_8_bits:port_map_adder|              ; 3 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|ula:ula_map|adder_8_bits:port_map_adder                                          ; adder_8_bits        ; work         ;
+;          |full_adder:A1|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|ula:ula_map|adder_8_bits:port_map_adder|full_adder:A1                            ; full_adder          ; work         ;
+;          |full_adder:A3|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|ula:ula_map|adder_8_bits:port_map_adder|full_adder:A3                            ; full_adder          ; work         ;
+;          |full_adder:A5|                         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|ula:ula_map|adder_8_bits:port_map_adder|full_adder:A5                            ; full_adder          ; work         ;
+;       |multi:port_map_multi|                     ; 106 (106)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|ula:ula_map|multi:port_map_multi                                                 ; multi               ; work         ;
+;       |sub_8_bits:port_map_sub|                  ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|ula:ula_map|sub_8_bits:port_map_sub                                              ; sub_8_bits          ; work         ;
+;          |adder_8_bits:A1|                       ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|ula:ula_map|sub_8_bits:port_map_sub|adder_8_bits:A1                              ; adder_8_bits        ; work         ;
+;             |full_adder:A1|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|ula:ula_map|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A1                ; full_adder          ; work         ;
+;             |full_adder:A3|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|ula:ula_map|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A3                ; full_adder          ; work         ;
+;             |full_adder:A5|                      ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|ula:ula_map|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A5                ; full_adder          ; work         ;
+;             |full_adder:A7|                      ; 1 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|ula:ula_map|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A7                ; full_adder          ; work         ;
+;                |half_adder:ha2|                  ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|ula:ula_map|sub_8_bits:port_map_sub|adder_8_bits:A1|full_adder:A7|half_adder:ha2 ; half_adder          ; work         ;
+;    |unidade_controle:unidade_controle_map|       ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |sonic|unidade_controle:unidade_controle_map                                            ; unidade_controle    ; work         ;
++--------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                   ;
++--------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------------------------------------------+
+; Name                                                                                       ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                                      ;
++--------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------------------------------------------+
+; memoria_ram:memoria_ram_map|altsyncram:ram_rtl_0|altsyncram_afu1:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 8            ; 8            ; 8            ; 8            ; 64   ; db/sonic.ram0_memoria_ram_2c141c.hdl.mif ;
++--------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                  ;
++------------------------------------------------------------+----------------------------------------+
+; Register name                                              ; Reason for Removal                     ;
++------------------------------------------------------------+----------------------------------------+
+; pc:pc_port_map|pc_out[4..7]                                ; Stuck at GND due to stuck port data_in ;
+; banco_registradores:banco_registradores_map|registrador~27 ; Stuck at GND due to stuck port data_in ;
+; banco_registradores:banco_registradores_map|registrador~35 ; Stuck at GND due to stuck port data_in ;
+; banco_registradores:banco_registradores_map|registrador~28 ; Stuck at GND due to stuck port data_in ;
+; banco_registradores:banco_registradores_map|registrador~36 ; Stuck at GND due to stuck port data_in ;
+; banco_registradores:banco_registradores_map|registrador~29 ; Stuck at GND due to stuck port data_in ;
+; banco_registradores:banco_registradores_map|registrador~37 ; Stuck at GND due to stuck port data_in ;
+; banco_registradores:banco_registradores_map|registrador~30 ; Stuck at GND due to stuck port data_in ;
+; banco_registradores:banco_registradores_map|registrador~38 ; Stuck at GND due to stuck port data_in ;
+; banco_registradores:banco_registradores_map|registrador~31 ; Stuck at GND due to stuck port data_in ;
+; banco_registradores:banco_registradores_map|registrador~39 ; Stuck at GND due to stuck port data_in ;
+; banco_registradores:banco_registradores_map|registrador~32 ; Stuck at GND due to stuck port data_in ;
+; banco_registradores:banco_registradores_map|registrador~40 ; Stuck at GND due to stuck port data_in ;
+; banco_registradores:banco_registradores_map|registrador~33 ; Stuck at GND due to stuck port data_in ;
+; banco_registradores:banco_registradores_map|registrador~41 ; Stuck at GND due to stuck port data_in ;
+; banco_registradores:banco_registradores_map|registrador~34 ; Stuck at GND due to stuck port data_in ;
+; banco_registradores:banco_registradores_map|registrador~42 ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 20                     ;                                        ;
++------------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 20    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                                              ;
++--------------------------------------------+---------------------------------------+------+
+; Register Name                              ; Megafunction                          ; Type ;
++--------------------------------------------+---------------------------------------+------+
+; memoria_ram:memoria_ram_map|out_port[0..7] ; memoria_ram:memoria_ram_map|ram_rtl_0 ; RAM  ;
++--------------------------------------------+---------------------------------------+------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |sonic|pc:pc_port_map|pc_out[4]                 ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |sonic|ula:ula_map|multi:port_map_multi|produto ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |sonic|ula:ula_map|multi:port_map_multi|produto ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |sonic|ula:ula_map|multi:port_map_multi|produto ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |sonic|ula:ula_map|multi:port_map_multi|produto ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |sonic|ula:ula_map|multi:port_map_multi|produto ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Source assignments for memoria_ram:memoria_ram_map|altsyncram:ram_rtl_0|altsyncram_afu1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                       ;
++---------------------------------+--------------------+------+------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                        ;
++---------------------------------+--------------------+------+------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: memoria_ram:memoria_ram_map|altsyncram:ram_rtl_0 ;
++------------------------------------+------------------------------------------+-------------------+
+; Parameter Name                     ; Value                                    ; Type              ;
++------------------------------------+------------------------------------------+-------------------+
+; BYTE_SIZE_BLOCK                    ; 8                                        ; Untyped           ;
+; AUTO_CARRY_CHAINS                  ; ON                                       ; AUTO_CARRY        ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                      ; IGNORE_CARRY      ;
+; AUTO_CASCADE_CHAINS                ; ON                                       ; AUTO_CASCADE      ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                      ; IGNORE_CASCADE    ;
+; WIDTH_BYTEENA                      ; 1                                        ; Untyped           ;
+; OPERATION_MODE                     ; DUAL_PORT                                ; Untyped           ;
+; WIDTH_A                            ; 8                                        ; Untyped           ;
+; WIDTHAD_A                          ; 3                                        ; Untyped           ;
+; NUMWORDS_A                         ; 8                                        ; Untyped           ;
+; OUTDATA_REG_A                      ; UNREGISTERED                             ; Untyped           ;
+; ADDRESS_ACLR_A                     ; NONE                                     ; Untyped           ;
+; OUTDATA_ACLR_A                     ; NONE                                     ; Untyped           ;
+; WRCONTROL_ACLR_A                   ; NONE                                     ; Untyped           ;
+; INDATA_ACLR_A                      ; NONE                                     ; Untyped           ;
+; BYTEENA_ACLR_A                     ; NONE                                     ; Untyped           ;
+; WIDTH_B                            ; 8                                        ; Untyped           ;
+; WIDTHAD_B                          ; 3                                        ; Untyped           ;
+; NUMWORDS_B                         ; 8                                        ; Untyped           ;
+; INDATA_REG_B                       ; CLOCK1                                   ; Untyped           ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                   ; Untyped           ;
+; RDCONTROL_REG_B                    ; CLOCK0                                   ; Untyped           ;
+; ADDRESS_REG_B                      ; CLOCK0                                   ; Untyped           ;
+; OUTDATA_REG_B                      ; UNREGISTERED                             ; Untyped           ;
+; BYTEENA_REG_B                      ; CLOCK1                                   ; Untyped           ;
+; INDATA_ACLR_B                      ; NONE                                     ; Untyped           ;
+; WRCONTROL_ACLR_B                   ; NONE                                     ; Untyped           ;
+; ADDRESS_ACLR_B                     ; NONE                                     ; Untyped           ;
+; OUTDATA_ACLR_B                     ; NONE                                     ; Untyped           ;
+; RDCONTROL_ACLR_B                   ; NONE                                     ; Untyped           ;
+; BYTEENA_ACLR_B                     ; NONE                                     ; Untyped           ;
+; WIDTH_BYTEENA_A                    ; 1                                        ; Untyped           ;
+; WIDTH_BYTEENA_B                    ; 1                                        ; Untyped           ;
+; RAM_BLOCK_TYPE                     ; AUTO                                     ; Untyped           ;
+; BYTE_SIZE                          ; 8                                        ; Untyped           ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                 ; Untyped           ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                     ; Untyped           ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                     ; Untyped           ;
+; INIT_FILE                          ; db/sonic.ram0_memoria_ram_2c141c.hdl.mif ; Untyped           ;
+; INIT_FILE_LAYOUT                   ; PORT_A                                   ; Untyped           ;
+; MAXIMUM_DEPTH                      ; 0                                        ; Untyped           ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                                   ; Untyped           ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                                   ; Untyped           ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                                   ; Untyped           ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                   ; Untyped           ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                          ; Untyped           ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                          ; Untyped           ;
+; ENABLE_ECC                         ; FALSE                                    ; Untyped           ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                    ; Untyped           ;
+; WIDTH_ECCSTATUS                    ; 3                                        ; Untyped           ;
+; DEVICE_FAMILY                      ; Cyclone V                                ; Untyped           ;
+; CBXI_PARAMETER                     ; altsyncram_afu1                          ; Untyped           ;
++------------------------------------+------------------------------------------+-------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                             ;
++-------------------------------------------+--------------------------------------------------+
+; Name                                      ; Value                                            ;
++-------------------------------------------+--------------------------------------------------+
+; Number of entity instances                ; 1                                                ;
+; Entity Instance                           ; memoria_ram:memoria_ram_map|altsyncram:ram_rtl_0 ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                        ;
+;     -- WIDTH_A                            ; 8                                                ;
+;     -- NUMWORDS_A                         ; 8                                                ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                     ;
+;     -- WIDTH_B                            ; 8                                                ;
+;     -- NUMWORDS_B                         ; 8                                                ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                           ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                     ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                             ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                         ;
++-------------------------------------------+--------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:ula_map|sub_8_bits:port_map_sub|adder_8_bits:A1" ;
++-------+-------+----------+------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                              ;
++-------+-------+----------+------------------------------------------------------+
+; sinal ; Input ; Info     ; Stuck at VCC                                         ;
++-------+-------+----------+------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:ula_map|sub_8_bits:port_map_sub"                                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:ula_map|adder_8_bits:port_map_adder" ;
++-------+-------+----------+------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                  ;
++-------+-------+----------+------------------------------------------+
+; sinal ; Input ; Info     ; Stuck at GND                             ;
++-------+-------+----------+------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ula:ula_map"                                                                            ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "divisao_instrucao:divisao_instrucao_map"                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; out_jump ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 20                          ;
+;     ENA               ; 16                          ;
+;     plain             ; 4                           ;
+; arriav_lcell_comb     ; 186                         ;
+;     arith             ; 56                          ;
+;         0 data inputs ; 4                           ;
+;         3 data inputs ; 8                           ;
+;         5 data inputs ; 44                          ;
+;     extend            ; 2                           ;
+;         7 data inputs ; 2                           ;
+;     normal            ; 128                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 19                          ;
+;         3 data inputs ; 21                          ;
+;         4 data inputs ; 28                          ;
+;         5 data inputs ; 29                          ;
+;         6 data inputs ; 26                          ;
+; boundary_port         ; 65                          ;
+; stratixv_ram_block    ; 8                           ;
+;                       ;                             ;
+; Max LUT depth         ; 14.70                       ;
+; Average LUT depth     ; 11.28                       ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:03     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Tue Dec 03 13:25:44 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off sonic -c sonic
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file sonic.vhd
+    Info (12022): Found design unit 1: sonic-hardware File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 29
+    Info (12023): Found entity 1: sonic File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/pc/pc.vhd
+    Info (12022): Found design unit 1: pc-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/pc/pc.vhd Line: 19
+    Info (12023): Found entity 1: pc File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/pc/pc.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/memoria_rom/memoria_rom.vhd
+    Info (12022): Found design unit 1: memoria_rom-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/memoria_rom/memoria_rom.vhd Line: 13
+    Info (12023): Found entity 1: memoria_rom File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/memoria_rom/memoria_rom.vhd Line: 5
+Warning (12019): Can't analyze file -- file ../apresentação/versoes/sonic1.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/divisao_instrucao/divisao_instrucao.vhd
+    Info (12022): Found design unit 1: divisao_instrucao-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/divisao_instrucao/divisao_instrucao.vhd Line: 13
+    Info (12023): Found entity 1: divisao_instrucao File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/divisao_instrucao/divisao_instrucao.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/banco_registradores/banco_registradores.vhd
+    Info (12022): Found design unit 1: banco_registradores-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/banco_registradores/banco_registradores.vhd Line: 16
+    Info (12023): Found entity 1: banco_registradores File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/banco_registradores/banco_registradores.vhd Line: 5
+Warning (12019): Can't analyze file -- file multiplexador_2x1/multiplexador_2x1.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/multiplexador_2x1/multiplexador_2x1.vhd
+    Info (12022): Found design unit 1: multiplexador_2x1-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/multiplexador_2x1/multiplexador_2x1.vhd Line: 13
+    Info (12023): Found entity 1: multiplexador_2x1 File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/multiplexador_2x1/multiplexador_2x1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/unidade_controle/unidade_controle.vhd
+    Info (12022): Found design unit 1: unidade_controle-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/unidade_controle/unidade_controle.vhd Line: 21
+    Info (12023): Found entity 1: unidade_controle File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/unidade_controle/unidade_controle.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/extensor_sinal_2_8/extensor_sinal_2_8.vhd
+    Info (12022): Found design unit 1: extensor_sinal_2_8-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/extensor_sinal_2_8/extensor_sinal_2_8.vhd Line: 11
+    Info (12023): Found entity 1: extensor_sinal_2_8 File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/extensor_sinal_2_8/extensor_sinal_2_8.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/temp_zero/temp_zero.vhd
+    Info (12022): Found design unit 1: temp_zero-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/temp_zero/temp_zero.vhd Line: 11
+    Info (12023): Found entity 1: temp_zero File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/temp_zero/temp_zero.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/mult/multi.vhd
+    Info (12022): Found design unit 1: multi-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/mult/multi.vhd Line: 13
+    Info (12023): Found entity 1: multi File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/mult/multi.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/adder/adder_8_bits.vhd
+    Info (12022): Found design unit 1: adder_8_bits-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/adder/adder_8_bits.vhd Line: 14
+    Info (12023): Found entity 1: adder_8_bits File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/adder/adder_8_bits.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/adder/full_adder.vhd
+    Info (12022): Found design unit 1: full_adder-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/adder/full_adder.vhd Line: 14
+    Info (12023): Found entity 1: full_adder File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/adder/full_adder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/adder/half_adder.vhd
+    Info (12022): Found design unit 1: half_adder-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/adder/half_adder.vhd Line: 13
+    Info (12023): Found entity 1: half_adder File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/adder/half_adder.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/adder/sub_8_bits.vhd
+    Info (12022): Found design unit 1: sub_8_bits-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/adder/sub_8_bits.vhd Line: 13
+    Info (12023): Found entity 1: sub_8_bits File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/adder/sub_8_bits.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/ula/ula.vhd
+    Info (12022): Found design unit 1: ula-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 16
+    Info (12023): Found entity 1: ula File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/memoria_ram/memoria_ram.vhd
+    Info (12022): Found design unit 1: memoria_ram-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/memoria_ram/memoria_ram.vhd Line: 16
+    Info (12023): Found entity 1: memoria_ram File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/memoria_ram/memoria_ram.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/extensor_sinal_4_8/extensor_sinal_4_8.vhd
+    Info (12022): Found design unit 1: extensor_sinal_4_8-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/extensor_sinal_4_8/extensor_sinal_4_8.vhd Line: 11
+    Info (12023): Found entity 1: extensor_sinal_4_8 File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/extensor_sinal_4_8/extensor_sinal_4_8.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/somador_pc/somador_pc.vhd
+    Info (12022): Found design unit 1: somador_pc-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/somador_pc/somador_pc.vhd Line: 12
+    Info (12023): Found entity 1: somador_pc File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/somador_pc/somador_pc.vhd Line: 5
+Warning (12019): Can't analyze file -- file componentes/porta_and/porta_and.vhd is missing
+Info (12021): Found 2 design units, including 1 entities, in source file componentes/port_and/port_and.vhd
+    Info (12022): Found design unit 1: port_and-behavior File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/port_and/port_and.vhd Line: 12
+    Info (12023): Found entity 1: port_and File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/port_and/port_and.vhd Line: 4
+Info (12127): Elaborating entity "sonic" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at sonic.vhd(64): object "out_jump_30_u" assigned a value but never read File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 64
+Warning (10036): Verilog HDL or VHDL warning at sonic.vhd(143): object "out_overflow" assigned a value but never read File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 143
+Info (12128): Elaborating entity "pc" for hierarchy "pc:pc_port_map" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 189
+Info (12128): Elaborating entity "memoria_rom" for hierarchy "memoria_rom:memoria_rom_port_map" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 190
+Warning (10492): VHDL Process Statement warning at memoria_rom.vhd(29): signal "in_port" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/memoria_rom/memoria_rom.vhd Line: 29
+Info (12128): Elaborating entity "divisao_instrucao" for hierarchy "divisao_instrucao:divisao_instrucao_map" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 192
+Info (12128): Elaborating entity "banco_registradores" for hierarchy "banco_registradores:banco_registradores_map" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 194
+Warning (10492): VHDL Process Statement warning at banco_registradores.vhd(30): signal "registrador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/banco_registradores/banco_registradores.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at banco_registradores.vhd(30): signal "endereco_reg_a" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/banco_registradores/banco_registradores.vhd Line: 30
+Warning (10492): VHDL Process Statement warning at banco_registradores.vhd(31): signal "registrador" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/banco_registradores/banco_registradores.vhd Line: 31
+Warning (10492): VHDL Process Statement warning at banco_registradores.vhd(31): signal "endereco_reg_b" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/banco_registradores/banco_registradores.vhd Line: 31
+Info (12128): Elaborating entity "unidade_controle" for hierarchy "unidade_controle:unidade_controle_map" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 196
+Warning (10492): VHDL Process Statement warning at unidade_controle.vhd(25): signal "op_code" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/unidade_controle/unidade_controle.vhd Line: 25
+Info (12128): Elaborating entity "multiplexador_2x1" for hierarchy "multiplexador_2x1:multiplexador_2x1_map" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 198
+Info (12128): Elaborating entity "extensor_sinal_2_8" for hierarchy "extensor_sinal_2_8:extensor_sinal_2_8_map" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 200
+Info (12128): Elaborating entity "ula" for hierarchy "ula:ula_map" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 202
+Warning (10036): Verilog HDL or VHDL warning at ula.vhd(63): object "temp_overflow_sub" assigned a value but never read File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 63
+Warning (10492): VHDL Process Statement warning at ula.vhd(72): signal "ula_op" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 72
+Warning (10492): VHDL Process Statement warning at ula.vhd(74): signal "result_adder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 74
+Warning (10492): VHDL Process Statement warning at ula.vhd(75): signal "temp_overflow_adder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at ula.vhd(78): signal "result_adder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 78
+Warning (10492): VHDL Process Statement warning at ula.vhd(79): signal "temp_overflow_adder" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 79
+Warning (10492): VHDL Process Statement warning at ula.vhd(82): signal "result_sub" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 82
+Warning (10492): VHDL Process Statement warning at ula.vhd(85): signal "result_sub" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 85
+Warning (10492): VHDL Process Statement warning at ula.vhd(88): signal "in_port_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at ula.vhd(91): signal "in_port_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 91
+Warning (10492): VHDL Process Statement warning at ula.vhd(94): signal "in_port_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at ula.vhd(97): signal "in_port_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 97
+Warning (10492): VHDL Process Statement warning at ula.vhd(100): signal "out_temp_zero" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 100
+Warning (10492): VHDL Process Statement warning at ula.vhd(108): signal "out_temp_zero" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at ula.vhd(116): signal "in_port_A" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 116
+Warning (10492): VHDL Process Statement warning at ula.vhd(116): signal "in_port_B" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 116
+Warning (10492): VHDL Process Statement warning at ula.vhd(124): signal "out_multi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 124
+Warning (10492): VHDL Process Statement warning at ula.vhd(125): signal "out_multi" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 125
+Warning (10631): VHDL Process Statement warning at ula.vhd(70): inferring latch(es) for signal or variable "overflow", which holds its previous value in one or more paths through the process File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 70
+Warning (10631): VHDL Process Statement warning at ula.vhd(70): inferring latch(es) for signal or variable "zero", which holds its previous value in one or more paths through the process File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 70
+Warning (10631): VHDL Process Statement warning at ula.vhd(70): inferring latch(es) for signal or variable "in_temp_zero", which holds its previous value in one or more paths through the process File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 70
+Info (10041): Inferred latch for "in_temp_zero" at ula.vhd(70) File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 70
+Info (10041): Inferred latch for "zero" at ula.vhd(70) File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 70
+Info (10041): Inferred latch for "overflow" at ula.vhd(70) File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 70
+Info (12128): Elaborating entity "temp_zero" for hierarchy "ula:ula_map|temp_zero:port_map_temp_zero" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 66
+Info (12128): Elaborating entity "multi" for hierarchy "ula:ula_map|multi:port_map_multi" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 67
+Info (12128): Elaborating entity "adder_8_bits" for hierarchy "ula:ula_map|adder_8_bits:port_map_adder" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 68
+Info (12128): Elaborating entity "full_adder" for hierarchy "ula:ula_map|adder_8_bits:port_map_adder|full_adder:A0" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/adder/adder_8_bits.vhd Line: 29
+Info (12128): Elaborating entity "half_adder" for hierarchy "ula:ula_map|adder_8_bits:port_map_adder|full_adder:A0|half_adder:ha1" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/adder/full_adder.vhd Line: 28
+Info (12128): Elaborating entity "sub_8_bits" for hierarchy "ula:ula_map|sub_8_bits:port_map_sub" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/ula/ula.vhd Line: 69
+Info (12128): Elaborating entity "memoria_ram" for hierarchy "memoria_ram:memoria_ram_map" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 204
+Info (12128): Elaborating entity "port_and" for hierarchy "port_and:port_and_map" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 208
+Info (12128): Elaborating entity "somador_pc" for hierarchy "somador_pc:somador_pc_map" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 210
+Warning (10492): VHDL Process Statement warning at somador_pc.vhd(16): signal "in_port" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/somador_pc/somador_pc.vhd Line: 16
+Info (12128): Elaborating entity "extensor_sinal_4_8" for hierarchy "extensor_sinal_4_8:extensor_sinal_4_8_map" File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 212
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "banco_registradores:banco_registradores_map|registrador" is uninferred due to inappropriate RAM size File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/componentes/banco_registradores/banco_registradores.vhd Line: 19
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "memoria_ram:memoria_ram_map|ram_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
+        Info (286033): Parameter WIDTH_A set to 8
+        Info (286033): Parameter WIDTHAD_A set to 3
+        Info (286033): Parameter NUMWORDS_A set to 8
+        Info (286033): Parameter WIDTH_B set to 8
+        Info (286033): Parameter WIDTHAD_B set to 3
+        Info (286033): Parameter NUMWORDS_B set to 8
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_REG_B set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_B set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_B set to NONE
+        Info (286033): Parameter ADDRESS_REG_B set to CLOCK0
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/sonic.ram0_memoria_ram_2c141c.hdl.mif
+        Info (286033): Parameter READ_DURING_WRITE_MODE_MIXED_PORTS set to OLD_DATA
+        Info (286033): Parameter RDCONTROL_REG_B set to CLOCK0
+Info (12130): Elaborated megafunction instantiation "memoria_ram:memoria_ram_map|altsyncram:ram_rtl_0"
+Info (12133): Instantiated megafunction "memoria_ram:memoria_ram_map|altsyncram:ram_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "DUAL_PORT"
+    Info (12134): Parameter "WIDTH_A" = "8"
+    Info (12134): Parameter "WIDTHAD_A" = "3"
+    Info (12134): Parameter "NUMWORDS_A" = "8"
+    Info (12134): Parameter "WIDTH_B" = "8"
+    Info (12134): Parameter "WIDTHAD_B" = "3"
+    Info (12134): Parameter "NUMWORDS_B" = "8"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_REG_B" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_B" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_B" = "NONE"
+    Info (12134): Parameter "ADDRESS_REG_B" = "CLOCK0"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/sonic.ram0_memoria_ram_2c141c.hdl.mif"
+    Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
+    Info (12134): Parameter "RDCONTROL_REG_B" = "CLOCK0"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_afu1.tdf
+    Info (12023): Found entity 1: altsyncram_afu1 File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/db/altsyncram_afu1.tdf Line: 27
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "out_out_pc[4]" is stuck at GND File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 15
+    Warning (13410): Pin "out_out_pc[5]" is stuck at GND File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 15
+    Warning (13410): Pin "out_out_pc[6]" is stuck at GND File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 15
+    Warning (13410): Pin "out_out_pc[7]" is stuck at GND File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 15
+    Warning (13410): Pin "out_rom_value[3]" is stuck at GND File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 16
+    Warning (13410): Pin "out_reg1[1]" is stuck at GND File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 18
+    Warning (13410): Pin "out_out_somador_pc[5]" is stuck at GND File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 21
+    Warning (13410): Pin "out_out_somador_pc[6]" is stuck at GND File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 21
+    Warning (13410): Pin "out_out_somador_pc[7]" is stuck at GND File: C:/Users/Jorge Siqueira/Desktop/PROCESSADOR SONIC/Processador/sonic.vhd Line: 21
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 276 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 64 output pins
+    Info (21061): Implemented 203 logic cells
+    Info (21064): Implemented 8 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 44 warnings
+    Info: Peak virtual memory: 4868 megabytes
+    Info: Processing ended: Tue Dec 03 13:26:14 2019
+    Info: Elapsed time: 00:00:30
+    Info: Total CPU time (on all processors): 00:00:58
+
+
